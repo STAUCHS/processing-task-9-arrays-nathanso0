@@ -7,10 +7,10 @@ public class Sketch extends PApplet {
   float[] snowY = new float [42];
   int snowDiameter = 10;
   //Related arrays and varaiables for the (x,y) coordinates of the character
-  boolean upPressed = false;
-  boolean downPressed = false;
-  boolean leftPressed = false;
-  boolean rightPressed = false;
+  boolean upPressedCharacter = false;
+  boolean downPressedCharacter = false;
+  boolean leftPressedCharacter = false;
+  boolean rightPressedCharacter = false;
   float characterY = 150;
   float characterX = 150;
 
@@ -32,16 +32,16 @@ public class Sketch extends PApplet {
     //draw snow
     snow();
     //draw player character
-    if (upPressed) {
+    if (upPressedCharacter) {
       characterY--;
     }
-    if (downPressed) {
+    if (downPressedCharacter) {
       characterY++;
     }
-    if (leftPressed) {
+    if (leftPressedCharacter) {
       characterX--;
     }
-    if (rightPressed) {
+    if (rightPressedCharacter) {
       characterX++;
   }
   fill(225,0,0);
@@ -71,31 +71,31 @@ public class Sketch extends PApplet {
   }
   public void keyPressed() {
     if (key == 'w') {
-      upPressed = true;
+      upPressedCharacter = true;
     }
     else if (key == 's') {
-      downPressed = true;
+      downPressedCharacter = true;
     }
     else if (key == 'a') {
-      leftPressed = true;
+      leftPressedCharacter = true;
     }
     else if (key == 'd') {
-      rightPressed = true;
+      rightPressedCharacter = true;
     }
   }
   
   public void keyReleased() {
     if (key == 'w') {
-      upPressed = false;
+      upPressedCharacter = false;
     }
     else if (key == 's') {
-      downPressed = false;
+      downPressedCharacter = false;
     }
     else if (key == 'a') {
-      leftPressed = false;
+      leftPressedCharacter = false;
     }
     else if (key == 'd') {
-      rightPressed = false;
+      rightPressedCharacter = false;
     }
   }
 }
