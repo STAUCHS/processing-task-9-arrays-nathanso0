@@ -1,0 +1,12 @@
+{
+    "java.project.referencedLibraries": {
+        "include": [
+            "lib/**/*.jar",
+            "/Users/son0585/Downloads/Coding Repositories/core.jar",
+            "c:\\Users\\Nathan\\Downloads\\Coding Homework\\core.jar"
+        ],
+        "exclude": [
+            "lib/repl_core.jar"
+        ]
+    }
+}
